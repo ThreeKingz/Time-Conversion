@@ -44,9 +44,6 @@ stock datetime2stamp(&sec1970, year, month, day, hour, minute, second, gmh = 0, 
 
 	for(new m = 1; m < month; m++)
 		day += monthdays[m - 1];
-
-    if(!(year & 0x03) && month > 2)
-        day += 1;
     day -= 1;
 	
     sec1970 += (day * SECONDS_PER_DAY);
